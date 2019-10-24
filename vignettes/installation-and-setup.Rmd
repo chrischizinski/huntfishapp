@@ -1,0 +1,85 @@
+---
+title: "Installation and Setup"
+author: "Nathaniel Price"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Setup}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Overview
+
+The huntfishapp is an R package containing the app and supporting functions. The file structure follows the standard R package structure (http://r-pkgs.had.co.nz/). The Shiny application itself is in a subdirectory of the inst folder. This subdirectory will become a top level directory when the package is installed. All supporting functions for the Shiny application are stored in the R directory.
+
+## Local Setup
+
+### Installation
+
+The huntfishapp package is currently only available from Github.
+
+```{r, eval = FALSE}
+# Install development version from GitHub (requires devtools package)
+devtools::install_github("natbprice/huntfishapp")
+```
+
+### Database Connection
+The app will attempt to connect to a database management system (DBMS) with the data source name (DSN) "HuntFishApp". The data source "HuntFishApp" should be configured separately from the installation of the Shiny application. Please refer to the relevant documentation for your operating system for configuring the data source (https://db.rstudio.com/best-practices/drivers/, https://cran.r-project.org/web/packages/odbc/readme/README.html). Note that the data source does not need to include any stored login credentials. The username and password for the database are input by the user when starting the app. To configure the data source you will need to know the IP address or host name of the database. To use the Shiny application you will need to know the username and password with appropriate privleges. Contact the database administrator for assistance.
+
+To test the database connection you can execute the following code:
+
+```{r, eval = FALSE}
+conn <- DBI::dbConnect(odbc::odbc(), 
+                       dsn = "HuntFishApp", 
+                       uid = "your username", 
+                       pwd = "your password")
+
+dplyr::tbl(conn, "huntfishapp")
+
+```
+
+It is recommended that the keyring package is used in order to avoid disclosing the username and password in any R code.
+
+```{r, eval = FALSE}
+# Database connection
+conn <- DBI::dbConnect(odbc::odbc(),
+                        dsn = "HuntFishApp", 
+                        uid = keyring::key_get("HuntFishAppUID"), 
+                        pwd = keyring::key_get("HuntFishAppPWD"))
+```
+
+
+### Launching the app
+Once the huntfishapp package has been installed and the database connection has been configured you can launch the app using the following code:
+
+```{r, eval = FALSE}
+library(huntfishapp)
+launchApp()
+```
+
+## Server Setup
+To setup the app on Shiny Server you will need to install R, the shiny package, and then Shiny Server. Refer to the Shiny Server Administrator's Guide for installation and setup instructions (http://docs.rstudio.com/shiny-server/). It is also recommended that a proxy is used so that apps can be served via https:// (https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy).
+
+The exact setup and installation instructions of the app will depend on how Shiny Server was configured. The huntfishapp package can be installed as described in the Local Setup section of this document. It is important that the package be installed in the library of the "shiny" user. After installing the package and any dependencies it is necessary to set the directory permissions so that the "shiny" user will be able access the packages. It is also necessary to configure the database connection as described in the Local Setup section of this document.
+
+Shiny applications are served from directories within '/srv/shiny-server'. Shiny Server expects each directory to contain a ui.R and a server.R file or an app.R file. Since the huntfishapp is installed as a package we need to provide additional code for launching the application. The following code can be saved as an app.R file in a subdirectory of '/srv/shiny-server' to provide a means for Shiny Server to launch the app,
+
+```{r eval = FALSE}
+library(huntfishapp)
+dir <- system.file('shiny_app', package = 'huntfishapp')
+setwd(dir)
+shiny::shinyAppDir('.')
+```
+
+
+
+
+

@@ -1,0 +1,95 @@
+﻿/* CSS used here will be applied after bootstrap.css */
+/** { 
+	margin: auto;
+	max-width: 1366px;
+}
+*/
+/*body {
+    background-color: #eeeeee;
+}
+
+.tabbable {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+	border-color: #000000;
+	border-bottom-color: #000000;
+}
+
+.tab-content {
+	overflow: auto;
+	min-height: 450px;
+    padding: 30px;
+	background-color: #FFFFFF;
+}
+
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+	background-color: #FFFFFF  !Important;
+    border-color: #000000 !Important;
+    border-bottom-color: transparent !Important;
+}
+
+.nav-tabs > li > a{
+	height: 40px;
+}
+*/
+
+.tab-content {
+	overflow: auto;
+	min-height: 550px;
+	padding: 30px;
+}
+
+#rcorners5 {
+	margin: 5px;
+	padding: 30px;
+  	border-radius: 5px;
+  	background: #FFFFFF;;
+	border: 1px solid #000000;
+	padding-top: 10px;
+  	height: auto;
+}
+
+#moduleContainer {
+	margin: 0;
+	padding: 0;
+  	border-radius: 5px;
+  	background: #FFFFFF;;
+	border: 1px solid #000000;
+  	height: auto;
+}
+
+
+.busy { 
+	position:fixed;
+	z-index:1000;
+	bottom: 0; 
+	right: 0;
+	display:none;
+	background: grey;
+	background: rgba(230, 230, 230, 0.9);
+	text-align: center;
+	padding: 20px 30px 40px 30px;
+	border-radius: 5px;
+}
+
+.plotDesc {
+	font-size: 120%;
+	width: 560px;
+	margin: 5px;
+}
+
+.filterWarning {
+	font-size: 120%;
+	color: red;
+	width: 560px;
+	margin: 5px;
+}
+
+hr {
+	border-color: gray;
+}

@@ -1,0 +1,628 @@
+{
+  "input": {
+    "dataSource": "csv",
+    "dimension": [
+      1366,
+      768
+    ],
+    "mainNS-activePanelSelect": "recruitment",
+    "mainNS-age": [
+      0,
+      100
+    ],
+    "mainNS-age-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-age-binSize": 5,
+    "mainNS-age-facet": "none",
+    "mainNS-age-facetScales": "fixed",
+    "mainNS-age-focusYears": "2018",
+    "mainNS-age-spNS-bgColor": "transparent",
+    "mainNS-age-spNS-fontSize": 12,
+    "mainNS-age-spNS-height": 5,
+    "mainNS-age-spNS-includeTitle": false,
+    "mainNS-age-spNS-legendPosition": "bottom",
+    "mainNS-age-spNS-plotTheme": "document (light background)",
+    "mainNS-age-spNS-textAngle": 45,
+    "mainNS-age-spNS-textColor": "black",
+    "mainNS-age-spNS-width": 7,
+    "mainNS-churn-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-churn-deathThreshold": 5,
+    "mainNS-churn-fill": "none",
+    "mainNS-churn-spNS-bgColor": "transparent",
+    "mainNS-churn-spNS-fontSize": 12,
+    "mainNS-churn-spNS-height": 5,
+    "mainNS-churn-spNS-includeTitle": false,
+    "mainNS-churn-spNS-legendPosition": "bottom",
+    "mainNS-churn-spNS-plotTheme": "document (light background)",
+    "mainNS-churn-spNS-textAngle": 45,
+    "mainNS-churn-spNS-textColor": "black",
+    "mainNS-churn-spNS-width": 7,
+    "mainNS-churn-yScales": "zero",
+    "mainNS-churn-yvar": "churnedCustomers",
+    "mainNS-collapsePlotModules": "recruitment",
+    "mainNS-county": null,
+    "mainNS-customers-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-customers-facet": "none",
+    "mainNS-customers-fill": "none",
+    "mainNS-customers-focusMonths": "Jan",
+    "mainNS-customers-focusYears": "2018",
+    "mainNS-customers-spNS-bgColor": "transparent",
+    "mainNS-customers-spNS-fontSize": 12,
+    "mainNS-customers-spNS-height": 5,
+    "mainNS-customers-spNS-includeTitle": false,
+    "mainNS-customers-spNS-legendPosition": "bottom",
+    "mainNS-customers-spNS-plotTheme": "document (light background)",
+    "mainNS-customers-spNS-textAngle": 45,
+    "mainNS-customers-spNS-textColor": "black",
+    "mainNS-customers-spNS-width": 7,
+    "mainNS-customers-xvar": "itemYear",
+    "mainNS-customers-yvar": "customers",
+    "mainNS-duration": null,
+    "mainNS-gender": null,
+    "mainNS-gender-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-gender-facet": "none",
+    "mainNS-gender-focusMonths": "Jan",
+    "mainNS-gender-focusYears": "2018",
+    "mainNS-gender-spNS-bgColor": "transparent",
+    "mainNS-gender-spNS-fontSize": 12,
+    "mainNS-gender-spNS-height": 5,
+    "mainNS-gender-spNS-includeTitle": false,
+    "mainNS-gender-spNS-legendPosition": "bottom",
+    "mainNS-gender-spNS-plotTheme": "document (light background)",
+    "mainNS-gender-spNS-textAngle": 45,
+    "mainNS-gender-spNS-textColor": "black",
+    "mainNS-gender-spNS-width": 7,
+    "mainNS-gender-xvar": "itemYear",
+    "mainNS-itemResidency": null,
+    "mainNS-itemType": [
+      "Fish",
+      "Deer"
+    ],
+    "mainNS-itemYear": [
+      2010,
+      2018
+    ],
+    "mainNS-map-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-map-facet": "none",
+    "mainNS-map-focusYears": "2018",
+    "mainNS-map-mapRegion": "County",
+    "mainNS-map-spNS-bgColor": "transparent",
+    "mainNS-map-spNS-fontSize": 12,
+    "mainNS-map-spNS-height": 5,
+    "mainNS-map-spNS-includeTitle": false,
+    "mainNS-map-spNS-legendPosition": "bottom",
+    "mainNS-map-spNS-plotTheme": "document (light background)",
+    "mainNS-map-spNS-textAngle": 45,
+    "mainNS-map-spNS-textColor": "black",
+    "mainNS-map-spNS-width": 7,
+    "mainNS-map-yvar": "participationRate",
+    "mainNS-radialsets-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-radialsets-focusYears": "2018",
+    "mainNS-radialsets-linkThickness": "percent",
+    "mainNS-radialsets-spNS-bgColor": "transparent",
+    "mainNS-radialsets-spNS-fontSize": 12,
+    "mainNS-radialsets-spNS-height": 5,
+    "mainNS-radialsets-spNS-includeTitle": false,
+    "mainNS-radialsets-spNS-legendPosition": "bottom",
+    "mainNS-radialsets-spNS-plotTheme": "document (light background)",
+    "mainNS-radialsets-spNS-textAngle": 45,
+    "mainNS-radialsets-spNS-textColor": "black",
+    "mainNS-radialsets-spNS-width": 7,
+    "mainNS-recruitment-activeTab": "Description",
+    "mainNS-recruitment-birthThreshold": 5,
+    "mainNS-recruitment-fill": "residency",
+    "mainNS-recruitment-plot_hover": null,
+    "mainNS-recruitment-saveData-filename": "huntfishapp_recruitment",
+    "mainNS-recruitment-saveData-summaryTable_cell_clicked": {
+
+    },
+    "mainNS-recruitment-saveData-summaryTable_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "mainNS-recruitment-saveData-summaryTable_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "mainNS-recruitment-saveData-summaryTable_rows_selected": null,
+    "mainNS-recruitment-saveData-summaryTable_search": "",
+    "mainNS-recruitment-saveData-summaryTable_state": null,
+    "mainNS-recruitment-spNS-bgColor": "transparent",
+    "mainNS-recruitment-spNS-fontSize": 12,
+    "mainNS-recruitment-spNS-height": 5,
+    "mainNS-recruitment-spNS-includeTitle": false,
+    "mainNS-recruitment-spNS-legendPosition": "bottom",
+    "mainNS-recruitment-spNS-plotTheme": "document (light background)",
+    "mainNS-recruitment-spNS-textAngle": 45,
+    "mainNS-recruitment-spNS-textColor": "black",
+    "mainNS-recruitment-spNS-width": 7,
+    "mainNS-recruitment-yLim": [
+      0.152,
+      0.525
+    ],
+    "mainNS-recruitment-yScales": "zero",
+    "mainNS-recruitment-yvar": "recruitmentRate",
+    "mainNS-residency": null,
+    "mainNS-revenue-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-revenue-facet": "none",
+    "mainNS-revenue-fill": "none",
+    "mainNS-revenue-focusMonths": "Jan",
+    "mainNS-revenue-focusYears": "2018",
+    "mainNS-revenue-spNS-bgColor": "transparent",
+    "mainNS-revenue-spNS-fontSize": 12,
+    "mainNS-revenue-spNS-height": 5,
+    "mainNS-revenue-spNS-includeTitle": false,
+    "mainNS-revenue-spNS-legendPosition": "bottom",
+    "mainNS-revenue-spNS-plotTheme": "document (light background)",
+    "mainNS-revenue-spNS-textAngle": 45,
+    "mainNS-revenue-spNS-textColor": "black",
+    "mainNS-revenue-spNS-width": 7,
+    "mainNS-revenue-xvar": "itemYear",
+    "mainNS-upset-activeTab": "<strong>Plot<\/strong>",
+    "mainNS-upset-focusYears": "2018",
+    "mainNS-upset-spNS-bgColor": "transparent",
+    "mainNS-upset-spNS-fontSize": 12,
+    "mainNS-upset-spNS-height": 5,
+    "mainNS-upset-spNS-includeTitle": false,
+    "mainNS-upset-spNS-legendPosition": "bottom",
+    "mainNS-upset-spNS-plotTheme": "document (light background)",
+    "mainNS-upset-spNS-textAngle": 45,
+    "mainNS-upset-spNS-textColor": "black",
+    "mainNS-upset-spNS-width": 7,
+    "passwordSubmit": 1,
+    "passwordText": "",
+    "usernameText": ""
+  },
+  "output": {
+    "mainNS-age-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-age-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-age-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-age-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-churn-deathThresholdUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-churn-deathThreshold\">Years without purchase:<\/label>\n  <input class=\"js-range-slider\" id=\"mainNS-churn-deathThreshold\" data-min=\"1\" data-max=\"8\" data-from=\"5\" data-step=\"1\" data-grid=\"true\" data-grid-num=\"7\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-data-type=\"number\"/>\n<\/div>",
+      "deps": [
+        {
+          "name": "ionrangeslider",
+          "version": "2.1.6",
+          "src": {
+            "href": "shared/ionrangeslider"
+          },
+          "meta": null,
+          "script": "js/ion.rangeSlider.min.js",
+          "stylesheet": [
+            "css/ion.rangeSlider.css",
+            "css/ion.rangeSlider.skinShiny.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "strftime",
+          "version": "0.9.2",
+          "src": {
+            "href": "shared/strftime"
+          },
+          "meta": null,
+          "script": "strftime-min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-churn-yLimUI": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "mainNS-customers-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-customers-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-customers-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-customers-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-filterDesc": "<p style=\"padding: 1em 0 1em 0;\"><font color=\"black\"><b>Active Filters:<\/b><\/font> Fish, Deer | 2010, 2018 <\/p>",
+    "mainNS-gender-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-gender-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-gender-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-gender-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-map-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-map-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-map-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-map-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-radialsets-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-radialsets-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-radialsets-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-radialsets-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-recruitment-birthThresholdUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-recruitment-birthThreshold\">Years without purchase:<\/label>\n  <input class=\"js-range-slider\" id=\"mainNS-recruitment-birthThreshold\" data-min=\"1\" data-max=\"8\" data-from=\"5\" data-step=\"1\" data-grid=\"true\" data-grid-num=\"7\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-data-type=\"number\"/>\n<\/div>",
+      "deps": [
+        {
+          "name": "ionrangeslider",
+          "version": "2.1.6",
+          "src": {
+            "href": "shared/ionrangeslider"
+          },
+          "meta": null,
+          "script": "js/ion.rangeSlider.min.js",
+          "stylesheet": [
+            "css/ion.rangeSlider.css",
+            "css/ion.rangeSlider.skinShiny.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "strftime",
+          "version": "0.9.2",
+          "src": {
+            "href": "shared/strftime"
+          },
+          "meta": null,
+          "script": "strftime-min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-recruitment-GGPlot": {
+      "src": "[image data sha1: 0b809dbdf3cc42da8eb980d7c4b40105e62c95be]",
+      "width": 991,
+      "height": 380,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 2014.85,
+              "right": 2018.15,
+              "bottom": -0.025,
+              "top": 0.525
+            },
+            "mapping": {
+              "group": "residency",
+              "fill": "residency",
+              "colour": "residency",
+              "x": "itemYear",
+              "y": "recruitmentRateScaled"
+            },
+            "range": {
+              "left": 301.539830647488,
+              "right": 769.407865491989,
+              "bottom": 243.896657521877,
+              "top": 9.9626400996264
+            }
+          }
+        ],
+        "dims": {
+          "width": 991,
+          "height": 380
+        }
+      }
+    },
+    "mainNS-recruitment-hover_info": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "mainNS-recruitment-plotUI": {
+      "html": "<div style=\"position:relative\">\n  <div id=\"mainNS-recruitment-GGPlot\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 380px\" data-hover-id=\"mainNS-recruitment-plot_hover\" data-hover-delay=\"100\" data-hover-delay-type=\"debounce\" data-hover-clip=\"TRUE\" data-hover-null-outside=\"TRUE\"><\/div>\n  <div id=\"mainNS-recruitment-hover_info\" class=\"shiny-html-output\"><\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "mainNS-recruitment-saveData-downloadUI": {
+      "html": "<a id=\"mainNS-recruitment-saveData-downloadData\" class=\"btn btn-default shiny-download-link \" href=\"\" target=\"_blank\" download>\n  <i class=\"fa fa-download\"><\/i>\n  Download Data\n<\/a>",
+      "deps": [
+        {
+          "name": "font-awesome",
+          "version": "5.3.1",
+          "src": {
+            "href": "font-awesome-5.3.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": [
+            "css/all.min.css",
+            "css/v4-shims.min.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-recruitment-saveData-filenameUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-recruitment-saveData-filename\">Filename:<\/label>\n  <input id=\"mainNS-recruitment-saveData-filename\" type=\"text\" class=\"form-control\" value=\"huntfishapp_recruitment\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "mainNS-recruitment-saveData-summaryTable": {
+      "x": {
+        "filter": "none",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>itemYear<\/th>\n      <th>residency<\/th>\n      <th>recruitedCustomers<\/th>\n      <th>retainedCustomers<\/th>\n      <th>totalCustomers<\/th>\n      <th>recruitmentRate<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.19",
+          "src": {
+            "href": "dt-core-1.10.19"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-recruitment-yLimUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-recruitment-yLim\">y-axes limits<\/label>\n  <input class=\"js-range-slider\" id=\"mainNS-recruitment-yLim\" data-type=\"double\" data-min=\"0\" data-max=\"0.6\" data-from=\"0.152\" data-to=\"0.525\" data-step=\"0.005\" data-grid=\"true\" data-grid-num=\"10\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-drag-interval=\"true\" data-data-type=\"number\"/>\n<\/div>",
+      "deps": [
+        {
+          "name": "ionrangeslider",
+          "version": "2.1.6",
+          "src": {
+            "href": "shared/ionrangeslider"
+          },
+          "meta": null,
+          "script": "js/ion.rangeSlider.min.js",
+          "stylesheet": [
+            "css/ion.rangeSlider.css",
+            "css/ion.rangeSlider.skinShiny.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "strftime",
+          "version": "0.9.2",
+          "src": {
+            "href": "shared/strftime"
+          },
+          "meta": null,
+          "script": "strftime-min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-revenue-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-revenue-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-revenue-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-revenue-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-upset-focusYearsUI": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"mainNS-upset-focusYears\">Focus year:<\/label>\n  <div>\n    <select id=\"mainNS-upset-focusYears\" class=\"form-control\"><option value=\"2010\">2010<\/option>\n<option value=\"2011\">2011<\/option>\n<option value=\"2012\">2012<\/option>\n<option value=\"2013\">2013<\/option>\n<option value=\"2014\">2014<\/option>\n<option value=\"2015\">2015<\/option>\n<option value=\"2016\">2016<\/option>\n<option value=\"2017\">2017<\/option>\n<option value=\"2018\" selected>2018<\/option><\/select>\n    <script type=\"application/json\" data-for=\"mainNS-upset-focusYears\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mainNS-upset-nGroupsUI": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

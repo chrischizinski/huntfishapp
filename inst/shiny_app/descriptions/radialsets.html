@@ -1,0 +1,49 @@
+﻿<!doctype html>
+
+<head>
+<style type="text/css">
+.plotDesc {
+	font-size: 120%;
+	width: 560px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="plotDesc">
+	<span class="text-primary"><strong>Summary:</strong></span><br>The permit combinations 
+	Radial Sets plot panel displays a graphic based on a Radial Sets diagram.
+	<br><br>In our simplified version of a Radial Sets diagram, there is an outside 
+	ring with sections for each item type. The sections are sized according to the 
+	total number of customers who purchased each item type irrespective of other 
+	purchases. <br><br>Inside each section of the ring, there are four bars indicating 
+	the number of customers who purchased only that item type, one additional type, 
+	two additional types, or three or more additional types.<br><br>Inside the ring 
+	of the donut plot, there are edges (i.e., lines) connecting the nodes (i.e., 
+	sections). The width of the edges indicates the percent overlap between the 
+	two customer groups relative to the total number of customers in both groups. 
+	For example, the edge between the “hunt” group and the “deer” group indicates 
+	the percent of all hunt and deer permit-buyers who purchased both permits.
+	<br><br>A drop-down menu input allows the user to select between sizing the 
+	edges by percent or number of customers. The “focus item type” drop-down menu 
+	input allows the user to select a single item type on which to focus. If the 
+	user selects an item type from the “focus group” menu, then all edges not connected 
+	to that type are removed. The edges are rescaled to indicate the percent of 
+	customers in the focus group who also purchased each additional type. <br>
+	<br>The visualization is a simplified version of an Radial Sets plot:<br>&nbsp;<div class="csl-bib-body" style="line-height: 1; margin-left: 2em; text-indent: -2em;">
+		<div class="csl-entry">
+			Alsallakh, B., Aigner, W., Miksch, S., &amp; Hauser, H. (2013). Radial 
+			sets: Interactive visual analysis of large overlapping sets. <i>IEEE 
+			Transactions on Visualization and Computer Graphics</i>, <i>19</i>(12), 
+			2496–2505.</div>
+		<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=UpSet%3A%20visualization%20of%20intersecting%20sets&amp;rft.jtitle=IEEE%20transactions%20on%20visualization%20and%20computer%20graphics&amp;rft.volume=20&amp;rft.issue=12&amp;rft.aufirst=Alexander&amp;rft.aulast=Lex&amp;rft.au=Alexander%20Lex&amp;rft.au=Nils%20Gehlenborg&amp;rft.au=Hendrik%20Strobelt&amp;rft.au=Romain%20Vuillemot&amp;rft.au=Hanspeter%20Pfister&amp;rft.date=2014&amp;rft.pages=1983%E2%80%931992">
+		</span></div>
+	<br>The code for creating Radial Sets diagrams in R is being developed as an 
+	independent package radsets (https://natbprice.github.io/radsets/)<br><br>
+	<span class="text-success"><i class="fa fa-lightbulb fa-1x"></i>&nbsp;<strong>Tips:</strong></span><br>
+	Try setting the filters on the sidebar and downloading a plot from the "Save 
+	plot" tab. Saved plots created with different filters can be used to compare 
+	groups. </div>
+
+</body>

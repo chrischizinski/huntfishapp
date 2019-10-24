@@ -1,0 +1,15 @@
+#' Sample hunting and fishing purchase data for 10,000 customers 
+#'
+#' A dataset for demonstrating the functionality of the app when a SQL database
+#' backend is unavailable. The dataset corresponds to purchase histories for 
+#' 10,000 customers in Nebraska purchasing between 2010 and 2018. The item types are limited
+#' to "Fish", "Deer", "Hunt", "Hunt Fish Combo", "Spring Turkey", "Fall Turkey", and
+#' "WaterFowl".
+#' 
+#' This dataset may differ significantly from real purchase data. Data perturbation
+#' techniques have been applied to this data including post randomization of 
+#' county and gender variables and adding uncorrelated noise to age and issue 
+#' date variables. 
+#'
+#'
+"huntfishappDemo"

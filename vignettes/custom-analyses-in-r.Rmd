@@ -1,0 +1,104 @@
+---
+title: "Custom Analyses in R"
+author: "Nathaniel Price"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Custom Analyses in R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(huntfishapp)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## Introduction
+
+The same functions that are used in the interactive web-based application to extract, analyze, and plot data are also accessible from R. These functions provide a basic framework for creating custom analyses. These functions can be used in R scripts to perform data analysis or in combination with R Markdown to create reports in a variety of formats. This vignette is itself an example of an R Markdown report.
+
+## Analysis Framework
+
+### Step 1: Load data
+The first step in writing a custom analysis is to load the data from the database. To faciliate this step the huntfishapp package provides the `filterData` function. Please refer to the function's help file for all the details on using this function (`?filterData`) . The `filterData` function takes three inputs: (1) a data source specification (`dataSource`), (2) a connection to the database (`conn`), (3) a list of data filters (`activeFilters`).
+
+To create a connection we first must add an ODBC data source under the name "HuntFishApp" and specify the IP address of the database server. Please refer to relevant documentation for your operating system (e.g., [Microsoft Administer ODBC data sources](https://support.office.com/en-us/article/administer-odbc-data-sources-b19f856b-5b9b-48c9-8b93-07484bfab5a7)) and contact your database administrator if you need assistance. This data source is the same as that used by the web-based application. The database should contain a view "huntfishapp". After creating the ODBC data source we can create a connection in R using the code below. The package [keyring](https://cran.r-project.org/package=keyring) is used to avoid disclosing the password in the R code. 
+
+```{r connection, eval = FALSE}
+# Database connection
+conn <- DBI::dbConnect(odbc::odbc(),
+                        dsn = "HuntFishApp", 
+                        uid = keyring::key_get("HuntFishAppUID"), 
+                        pwd = keyring::key_get("HuntFishAppPWD"))
+```
+
+Next, we need to specify any data filters (see help file `?filterData`). Here we specify that we only wish to include resident deer and fish permits for permit years between 2010 and 2018.
+
+```{r defineFilters}
+activeFilters <- list(itemResidency = "T",
+                      itemType = c("Deer", "Fish"),
+                      itemYear = c(2010, 2018))
+```
+
+Finally, we are ready to call `filterData` to create a SQL query. We will preview the results using the `glimpse` function from the dplyr package, but will not load the data in R yet. Note that in this vignette we specify `dataSource = "csv"` for demonstration purposes, but in general `dataSource = "sql"` should be used.
+
+```{r buildView, message = F, warning = F}
+# Build SQL query to load data
+permits <- filterData(dataSource = "csv", activeFilters = activeFilters)
+
+# Preview query result
+permits %>% glimpse()
+
+```
+
+### Step 2: Perform analysis
+After we are setup to load the data, we can start to design our analysis. Several analysis functions are provided. For example, we can use the `countCustomers` function to count the number of individual within a specified group ('See Also' section of help file lists other analysis functions `?countCustomers`). The `countCustomers` function has two inputs: (1) the permit data (`df`) and (2) a list of grouping variables (`groupVars`). Here we specify that we wish to count customers for groups defined by gender, item type, and item year.
+
+```{r runAnalysis}
+# Pass data through analysis function
+permitsSummary <- 
+  permits %>% 
+  countCustomers(c("gender", "itemType", "itemYear"))
+
+# Preview results
+permitsSummary
+```
+
+### Step 3: Plot results
+After performing the analysis, we may wish to create a plot of the results. Several plot functions are provided. The `buildBarPlot` function is used to create a stacked bar graph ('See Also' section of help file lists other plot functions `?buildBarPlot`). Here we create a bar graph with permit year as the x-variable, number of customers as the y-variable, gender as the fill color, and subplots for each permit type.
+
+```{r plotResult, fig.width = 7}
+# Stacked bar graph by permit year
+buildBarPlot(permitsSummary,
+             x = "itemYear",
+             y = "customers",
+             fill = "gender",
+             facet = "itemType",
+             title = "Number of customers (resident permits only)",
+             facetScales = "fixed",
+             scaleLabels = waiver())
+```
+
+### Step 4: Repeat
+Once we understand the basic steps in the framework it is easy to design and perform custom analyses. Here we put all the steps together to create a line plot indicating the churn rate of deer hunters over time in Lancaster and Douglas counties.
+
+```{r buildAnalyzePlot, fig.width = 7, fig.height = 7}
+# Build SQL query, analyze data, plot results
+filterData(dataSource = "csv", 
+                     activeFilters = list(itemYear = c(2010, 2018),
+                                          itemType = c("Deer"),
+                                          county = c("Lancaster", "Douglas"),
+                                          itemResidency = "T")) %>% 
+  calcChurn(c("county")) %>%
+  mutate(itemYear = as.integer(as.character(itemYear))) %>%
+  buildLinePlot(x = "itemYear",
+                y = "churnRate",
+                fill = "county",
+                title = "Deer hunter churn rate")
+```
+
+

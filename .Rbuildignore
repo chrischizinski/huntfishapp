@@ -1,0 +1,12 @@
+^Meta$
+^doc$
+^data-raw$
+^.*\.Rproj$
+^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^README\.Rmd$
+^LICENSE\.md$
+^CODE_OF_CONDUCT\.md$
+^\.github$

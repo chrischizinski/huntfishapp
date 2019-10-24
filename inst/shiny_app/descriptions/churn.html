@@ -1,0 +1,47 @@
+﻿<!doctype html>
+
+<head>
+<style type="text/css">
+.plotDesc {
+	font-size: 120%;
+	width: 560px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="plotDesc">
+	<span class="text-primary"><strong>Summary:</strong></span><br>Customer churn 
+	(a.k.a., attrition, turnover, or defection) is defined as the permanent loss 
+	of customers. By default, a customer is classified as a churned if they do not 
+	purchase in the next 5 years (i.e., a moving window analysis). The churn rate 
+	is defined as the number of customers lost after the current year divided by 
+	the total number of customers in the current year. The churn rate is the complement 
+	of the retention rate (i.e., customers who do not churn are retained).<br>
+	<br><span class="text-primary"><strong>Grouping Variables:<br></strong>
+	</span>When a variable is selected from the color variable menu customers are 
+	divided into groups. <br><br>For all grouping variables except "Age group", 
+	customers are divided into groups before they are classified as churned/not 
+	churned. For example, a customer who stops purchasing deer permits will be classified 
+	as churned within the deer item type group, even if they continue to purchase 
+	fishing licenses. Therefore, the sum of the reported number of churned customers 
+	when a color variable is selected may be greater than the reported number of 
+	churned customers when "Total" is selected.<br><br>An exception is made when 
+	"Age group" is used as a grouping variable. If "Age group" is selected, then 
+	customers are classfied as churned/not churned before they are divided into 
+	groups. Therefore, the sum of the reported number of churned customers by age 
+	group will equal the number of churned customers when "Total" is selected.<br>
+	<br><span class="text-success"><i class="fa fa-lightbulb fa-1x"></i>&nbsp;<strong>Tips:</strong></span><br>
+	To remove "(Missing)" group, activate filter by selecting all values. For example, 
+	check boxes for "Female" and "Male" on gender filter to remove entries with 
+	missing values for gender attribute. <br><br>You can change the size of moving 
+	window on the "Options" tab. Try decreasing the window size to 1 year without 
+	purchase to obtain more recent estimates of churn.<br><br>
+	<span class="text-danger"><i class="fa fa-exclamation-triangle fa-1x"></i>&nbsp;<strong>Caution:</strong></span><br>
+	If the data is filtered by age and/or year, then customers may be incorrectly 
+	classified as churned if the filters remove their future purchases.<br><br>Customers 
+	may purchase multiple item types and therefore the sum of the number of churned 
+	customers by item type may be greater than the total (see above).</div>
+
+</body>

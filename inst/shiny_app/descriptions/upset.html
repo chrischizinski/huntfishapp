@@ -1,0 +1,52 @@
+﻿<!doctype html>
+
+<head>
+<style type="text/css">
+.plotDesc {
+	font-size: 120%;
+	width: 560px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="plotDesc">
+	<span class="text-primary"><strong>Summary:</strong></span><br>The permit combinations 
+	UpSet visualization displays the number of customers with a particular combination 
+	of items. The visualization consists of a top bar plot, a side bar plot, and 
+	a table with dots and lines. <br><br>The top bar plot has a bar for each combination 
+	of items. However, since there is a very large number of possible combinations, 
+	only those combinations with a large number of customers are displayed. The 
+	number of bars in the top bar plot is controlled by the "item combinations" 
+	input. A customer will only be counted in a single bar in the top bar plot. 
+	For example, a customer who purchased a deer permit and a fish license will 
+	be counted in the bar corresponding to the deer and fish combination.<br>
+	<br>The columns in the table are the bar labels for the top bar plot. The table 
+	has rows corresponding to item types and columns corresponding to combinations 
+	of item types. For example, the deer and fish combination of items is indicated 
+	by a dot in the deer row, a dot in the fish row, and a vertical line connecting 
+	the dots. The bar above this column in the table indicates the number of customers 
+	who purchased a deer permit and fish license in a single year.<br><br>The rows 
+	in the table are the bar labels for the side bar plot. The side bar plot indicates 
+	the total number of customers who purchased each item type. In the side bar 
+	plot, a customer will be counted multiple times if they purchased multiple items. 
+	For example, a customer who purchased a deer permit and a fish license will 
+	be counted in the horizontal bar next to the fish row and in the horizontal 
+	bar next to the deer row. The number of customers in the deer bar of the side 
+	bar plot is the total of all the customers from the permit combinations (i.e., 
+	bars in the top bar plot) that included the purchase of a deer permit. <br>
+	<br>The visualization is a simplified version 
+	of an UpSet plot:<br>&nbsp;<div class="csl-bib-body" style="line-height: 1; margin-left: 2em; text-indent: -2em;">
+		<div class="csl-entry">
+			Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., &amp; Pfister, 
+			H. (2014). UpSet: visualization of intersecting sets. <i>IEEE Transactions 
+			on Visualization and Computer Graphics</i>, <i>20</i>(12), 1983–1992.</div>
+		<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=UpSet%3A%20visualization%20of%20intersecting%20sets&amp;rft.jtitle=IEEE%20transactions%20on%20visualization%20and%20computer%20graphics&amp;rft.volume=20&amp;rft.issue=12&amp;rft.aufirst=Alexander&amp;rft.aulast=Lex&amp;rft.au=Alexander%20Lex&amp;rft.au=Nils%20Gehlenborg&amp;rft.au=Hendrik%20Strobelt&amp;rft.au=Romain%20Vuillemot&amp;rft.au=Hanspeter%20Pfister&amp;rft.date=2014&amp;rft.pages=1983%E2%80%931992">
+		</span></div>
+	<br><br><span class="text-success"><i class="fa fa-lightbulb fa-1x"></i>&nbsp;<strong>Tips:</strong></span><br>
+	Try setting the filters on the sidebar and downloading a plot from the "Save 
+	plot" tab. Saved plots created with different filters can be used to compare 
+	groups. </div>
+
+</body>

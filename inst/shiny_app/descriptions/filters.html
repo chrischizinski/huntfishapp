@@ -1,0 +1,35 @@
+﻿<!doctype html>
+
+<head>
+<style type="text/css">
+.plotDesc {
+	font-size: 120%;
+	width: 560px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="plotDesc">
+	<span class="text-primary"><strong>Summary:</strong></span><br>The sidebar provides 
+	inputs that allow you to filter the data by many different attributes. Data 
+	filters should be used when you wish to remove data.<br><br>
+	<span class="text-success"><i class="fa fa-lightbulb fa-1x"></i>&nbsp;<strong>Tips:</strong></span><br>
+	Often, the "subplot variable" or "color variable" inputs on a plot panel can 
+	be used instead of filtering the data. For example, setting the "subplot 
+	variable" to "residency" creates subplots for "residents" and "non-residents" 
+	(rather than using filters to remove non-residents)<br><br>If you are 
+	changing many filters at once, then you should close all the plot panels. 
+	Expanded plot panels are automatically updated 2 seconds after filter inputs 
+	stop changing.<br><br>By default, entries with missing values for a 
+	particular attribute are included because blank or empty filters are not 
+	applied. To filter out entries with missing values, set the attribute filter 
+	to include all possible values (e.g., check both "resident" and 
+	"non-resident" to remove items with missing residency values)<br><br><span class="text-danger">
+	<i class="fa fa-exclamation-triangle fa-1x"></i>&nbsp;<strong>Caution:</strong></span><br>
+	The filter sidebar removes data from the analysis. In some situations this 
+	may be undesirable. For example, filtering data by age may lead to incorrect 
+	estimates of churn if the age filter removes future purchases.</div>
+
+</body>
