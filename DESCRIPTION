@@ -44,7 +44,8 @@ Imports:
     ggthemes,
     forcats,
     shinycssloaders,
-    stringr
+    stringr,
+    RColorBrewer
 Suggests: 
     testthat,
     knitr,

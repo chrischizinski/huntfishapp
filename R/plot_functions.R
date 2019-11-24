@@ -585,6 +585,7 @@ buildUpsetPlot <-
 #' Build radial sets plot
 #'
 #' @importFrom ggplotify as.ggplot
+#' @importFrom RColorBrewer brewer.pal
 #' @import circlize
 #'
 #' @export
