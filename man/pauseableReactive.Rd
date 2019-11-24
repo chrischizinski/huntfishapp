@@ -6,7 +6,7 @@
 \usage{
 pauseableReactive(x, env = parent.frame(), quoted = FALSE,
   priority = 0, domain = shiny::getDefaultReactiveDomain(),
-  paused = FALSE)
+  paused = TRUE)
 }
 \arguments{
 \item{x}{For \code{reactive}, an expression (quoted or unquoted). For

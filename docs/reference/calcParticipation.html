@@ -8,25 +8,21 @@
 
 <title>Calculate participation rate — calcParticipation • huntfishapp</title>
 
-
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -34,12 +30,11 @@
 
 
 
-
 <meta property="og:title" content="Calculate participation rate — calcParticipation" />
+
 <meta property="og:description" content="Calculate participation rate by group. Participation rate is the number of
 customers divided by the population size." />
 <meta name="twitter:card" content="summary" />
-
 
 
 
@@ -51,7 +46,6 @@ customers divided by the population size." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 
 
   </head>
@@ -78,7 +72,7 @@ customers divided by the population size." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -101,6 +95,7 @@ customers divided by the population size." />
   </ul>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -110,7 +105,6 @@ customers divided by the population size." />
 </div><!--/.navbar -->
 
       
-
       </header>
 
 <div class="row">
@@ -122,12 +116,14 @@ customers divided by the population size." />
     </div>
 
     <div class="ref-description">
+    
     <p>Calculate participation rate by group. Participation rate is the number of
 customers divided by the population size.</p>
+    
     </div>
 
     <pre class="usage"><span class='fu'>calcParticipation</span>(<span class='no'>df</span>, <span class='no'>groupVars</span>, <span class='no'>pop</span>)</pre>
-
+    
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -144,7 +140,7 @@ customers divided by the population size.</p>
       <td><p>A dataframe of population by county, year, gender, and age group.</p></td>
     </tr>
     </table>
-
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other analysis functions: <code><a href='calcChurn.html'>calcChurn</a></code>,
@@ -152,6 +148,7 @@ customers divided by the population size.</p>
   <code><a href='calcRecruitment.html'>calcRecruitment</a></code>,
   <code><a href='countCustomers.html'>countCustomers</a></code>, <code><a href='countItems.html'>countItems</a></code>,
   <code><a href='itemGroupCount.html'>itemGroupCount</a></code>, <code><a href='sumRevenue.html'>sumRevenue</a></code></p></div>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get list of valid counties (used to filter out data entry errors)</span>
@@ -164,10 +161,10 @@ customers divided by the population size.</p>
 <span class='co'># license between 2010 and 2017</span>
 <span class='fu'><a href='filterData.html'>filterData</a></span>(
   <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"csv"</span>,
-  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>), <span class='kw'>state</span> <span class='kw'>=</span> <span class='st'>"NE"</span>)
+  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>), <span class='kw'>state</span> <span class='kw'>=</span> <span class='st'>"NE"</span>)
 ) <span class='kw'>%&gt;%</span>
-  <span class='fu'>calcParticipation</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"itemType"</span>, <span class='st'>"county"</span>),
-    <span class='kw'>pop</span> <span class='kw'>=</span> <span class='no'>statePop</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span>(<span class='no'>state</span> <span class='kw'>==</span> <span class='st'>"NE"</span>)
+  <span class='fu'>calcParticipation</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"itemType"</span>, <span class='st'>"county"</span>),
+    <span class='kw'>pop</span> <span class='kw'>=</span> <span class='no'>statePop</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/filter'>filter</a></span>(<span class='no'>state</span> <span class='kw'>==</span> <span class='st'>"NE"</span>)
   ) <span class='kw'>%&gt;%</span>
   <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>county</span> <span class='kw'>%in%</span> <span class='no'>validCounties</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 91 x 5</span><span>
 #&gt;    itemType county    customers   pop participationRate
@@ -182,13 +179,13 @@ customers divided by the population size.</p>
 #&gt; </span><span style='color: #555555;'> 8</span><span> Fish     brown            11  </span><span style='text-decoration: underline;'>3</span><span>058          0.003</span><span style='text-decoration: underline;'>60</span><span> 
 #&gt; </span><span style='color: #555555;'> 9</span><span> Fish     buffalo         169 </span><span style='text-decoration: underline;'>48</span><span>834          0.003</span><span style='text-decoration: underline;'>46</span><span> 
 #&gt; </span><span style='color: #555555;'>10</span><span> Fish     burt             18  </span><span style='text-decoration: underline;'>6</span><span>546          0.002</span><span style='text-decoration: underline;'>75</span><span> 
-#&gt; </span><span style='color: #555555;'># ... with 81 more rows</span><span></div><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+#&gt; </span><span style='color: #555555;'># ... with 81 more rows</span><span></div></span><span class='co'># NOT RUN {</span>
 <span class='co'># Database connection. Suggest using keyring package to avoid hardcoding</span>
 <span class='co'># passwords</span>
-<span class='no'>myConn</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>DBI</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/DBI/man/dbConnect.html'>dbConnect</a></span>(<span class='kw pkg'>odbc</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/odbc/man/odbc.html'>odbc</a></span>(),
+<span class='no'>myConn</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>DBI</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/DBI/topics/dbConnect'>dbConnect</a></span>(<span class='kw pkg'>odbc</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/odbc/topics/odbc'>odbc</a></span>(),
   <span class='kw'>dsn</span> <span class='kw'>=</span> <span class='st'>"HuntFishApp"</span>, <span class='co'># Your datasource name</span>
-  <span class='kw'>uid</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
-  <span class='kw'>pwd</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
+  <span class='kw'>uid</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
+  <span class='kw'>pwd</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
 ) <span class='co'># Your password</span>
 
 <span class='co'># Get list of valid counties (used to filter out data entry errors)</span>
@@ -202,25 +199,27 @@ customers divided by the population size.</p>
 <span class='fu'><a href='filterData.html'>filterData</a></span>(
   <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"sql"</span>,
   <span class='kw'>conn</span> <span class='kw'>=</span> <span class='no'>myConn</span>,
-  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>), <span class='kw'>state</span> <span class='kw'>=</span> <span class='st'>"NE"</span>)
+  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>), <span class='kw'>state</span> <span class='kw'>=</span> <span class='st'>"NE"</span>)
 ) <span class='kw'>%&gt;%</span>
-  <span class='fu'>calcParticipation</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"itemType"</span>, <span class='st'>"county"</span>),
-    <span class='kw'>pop</span> <span class='kw'>=</span> <span class='no'>statePop</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span>(<span class='no'>state</span> <span class='kw'>==</span> <span class='st'>"NE"</span>)
+  <span class='fu'>calcParticipation</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"itemType"</span>, <span class='st'>"county"</span>),
+    <span class='kw'>pop</span> <span class='kw'>=</span> <span class='no'>statePop</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/filter'>filter</a></span>(<span class='no'>state</span> <span class='kw'>==</span> <span class='st'>"NE"</span>)
   ) <span class='kw'>%&gt;%</span>
   <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>county</span> <span class='kw'>%in%</span> <span class='no'>validCounties</span>)
-}</div></span></pre>
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      
       <li><a href="#see-also">See also</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
-
 
       <footer>
       <div class="copyright">
@@ -228,16 +227,13 @@ customers divided by the population size.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
 </div>
-
       </footer>
    </div>
 
   
 
-
   </body>
 </html>
-
 

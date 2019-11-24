@@ -17,7 +17,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of **huntfishapp** is to provide state and provincial fish and wildlife agencies and non-governmental organizations with a web-based, exploratory data analysis application for hunting, fishing, and outdoor recreation sales data. You can see huntfishapp in action at https://snr-hunteranglerapp.unl.edu/
+The goal of **huntfishapp** is to provide state and provincial fish and wildlife agencies and non-governmental organizations with a web-based, exploratory data analysis application for hunting, fishing, and outdoor recreation sales data.
+
+* **Package Website:** https://natbprice.github.io/huntfishapp
+* **Source Code:** https://github.com/natbprice/huntfishapp
+* **Live Demo App:** https://natbprice.shinyapps.io/huntfishapp/
 
 <img src="man/figures/app_screenshot.png" align="center" />
 
