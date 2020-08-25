@@ -1,1 +1,8 @@
 destination: docs
+title: fishhuntunl
+url: https://chrischizinski.github.io/huntfishapp
+template:
+  params:
+    bootswatch: flatly
+    ganalytics: UA-48496439-4
+

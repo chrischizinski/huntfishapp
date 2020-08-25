@@ -2,5 +2,8 @@ pandoc: 2.9.2.1
 pkgdown: 1.5.1.9000
 pkgdown_sha: 0f8b6b2d9b5c0bac7d2c990fd4ad34e8d8d19471
 articles: []
-last_built: 2020-08-25T19:35Z
+last_built: 2020-08-25T19:49Z
+urls:
+  reference: https://chrischizinski.github.io/huntfishapp/reference
+  article: https://chrischizinski.github.io/huntfishapp/articles
 
