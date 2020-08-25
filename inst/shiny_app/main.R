@@ -138,8 +138,7 @@ mainUI <- function(id) {
                                "recruitment",
                                "churn",
                                "upset",
-                               "radialsets",
-                               "about"
+                               "radialsets"
                              ),
                              selected = ""
                            ))
@@ -186,10 +185,7 @@ mainUI <- function(id) {
           )
         ),
         width = 10
-      ),
-      # WHERE YOUR FOOTER GOES
-      hr(),
-      print("~~~my disclaimer~~~~")
+      )
     )
   )
 }
