@@ -6,23 +6,31 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sum revenue by group — sumRevenue • huntfishapp</title>
+<title>Sum revenue by group — sumRevenue • HuntFishApp</title>
+
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -30,10 +38,10 @@
 
 
 
-<meta property="og:title" content="Sum revenue by group — sumRevenue" />
 
+<meta property="og:title" content="Sum revenue by group — sumRevenue" />
 <meta property="og:description" content="Calculate total revenue by group. Total revenue is the sum price variable." />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -47,9 +55,20 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48496439-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-48496439-4');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -62,7 +81,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">huntfishapp</a>
+        <a class="navbar-link" href="../index.html">HuntFishApp</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0</span>
       </span>
     </div>
@@ -71,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -94,7 +113,6 @@
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -104,6 +122,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -115,13 +134,11 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Calculate total revenue by group. Total revenue is the sum price variable.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>sumRevenue</span>(<span class='no'>df</span>, <span class='kw'>groupVars</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>sumRevenue</span>(<span class='kw'>df</span>, groupVars = <span class='kw'>NULL</span>)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -134,12 +151,11 @@
       <td><p>A character vector of variable names to group by</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A dataframe with columns for grouping variables and a column named
 revenue for total revenue</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other analysis functions: <code><a href='calcChurn.html'>calcChurn</a></code>,
@@ -148,16 +164,15 @@ revenue for total revenue</p>
   <code><a href='calcRecruitment.html'>calcRecruitment</a></code>,
   <code><a href='countCustomers.html'>countCustomers</a></code>, <code><a href='countItems.html'>countItems</a></code>,
   <code><a href='itemGroupCount.html'>itemGroupCount</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Demo data: Calculate revenue each year from fishing licenses between 2010</span>
 <span class='co'># and 2017</span>
 <span class='fu'><a href='filterData.html'>filterData</a></span>(
-  <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"csv"</span>,
-  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>))
-) <span class='kw'>%&gt;%</span>
-  <span class='fu'>sumRevenue</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"itemYear"</span>, <span class='st'>"itemType"</span>))</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 3</span><span>
+  dataSource = <span class='st'>"csv"</span>,
+  activeFilters = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(itemType = <span class='st'>"Fish"</span>, itemYear = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>))
+) <span class='op'>%&gt;%</span>
+  <span class='fu'>sumRevenue</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"itemYear"</span>, <span class='st'>"itemType"</span>))</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 3</span><span>
 #&gt;   itemYear itemType revenue
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
 #&gt; </span><span style='color: #555555;'>1</span><span> 2010     Fish      </span><span style='text-decoration: underline;'>30</span><span>774 
@@ -167,54 +182,50 @@ revenue for total revenue</p>
 #&gt; </span><span style='color: #555555;'>5</span><span> 2014     Fish      </span><span style='text-decoration: underline;'>35</span><span>642.
 #&gt; </span><span style='color: #555555;'>6</span><span> 2015     Fish      </span><span style='text-decoration: underline;'>34</span><span>204.
 #&gt; </span><span style='color: #555555;'>7</span><span> 2016     Fish      </span><span style='text-decoration: underline;'>40</span><span>332.
-#&gt; </span><span style='color: #555555;'>8</span><span> 2017     Fish      </span><span style='text-decoration: underline;'>42</span><span>917 </div></span><span class='co'># NOT RUN {</span>
+#&gt; </span><span style='color: #555555;'>8</span><span> 2017     Fish      </span><span style='text-decoration: underline;'>42</span><span>917 </div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># Database connection. Suggest using keyring package to avoid hardcoding</span>
 <span class='co'># passwords</span>
-<span class='no'>myConn</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>DBI</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/DBI/topics/dbConnect'>dbConnect</a></span>(<span class='kw pkg'>odbc</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/odbc/topics/odbc'>odbc</a></span>(),
-  <span class='kw'>dsn</span> <span class='kw'>=</span> <span class='st'>"HuntFishApp"</span>, <span class='co'># Your datasource name</span>
-  <span class='kw'>uid</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
-  <span class='kw'>pwd</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
+<span class='kw'>myConn</span> <span class='op'>&lt;-</span> <span class='kw'>DBI</span>::<span class='fu'><a href='https://dbi.r-dbi.org/reference/dbConnect.html'>dbConnect</a></span>(<span class='kw'>odbc</span>::<span class='fu'><a href='https://rdrr.io/pkg/odbc/man/odbc.html'>odbc</a></span>(),
+  dsn = <span class='st'>"HuntFishApp"</span>, <span class='co'># Your datasource name</span>
+  uid = <span class='kw'>keyring</span>::<span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
+  pwd = <span class='kw'>keyring</span>::<span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
 ) <span class='co'># Your password</span>
 
 <span class='co'># SQL Backend: Calculate revenue each year from fishing licenses between 2010</span>
 <span class='co'># and 2017</span>
 <span class='fu'><a href='filterData.html'>filterData</a></span>(
-  <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"sql"</span>,
-  <span class='kw'>conn</span> <span class='kw'>=</span> <span class='no'>myConn</span>,
-  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>itemType</span> <span class='kw'>=</span> <span class='st'>"Fish"</span>, <span class='kw'>itemYear</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>))
-) <span class='kw'>%&gt;%</span>
-  <span class='fu'>sumRevenue</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"itemYear"</span>, <span class='st'>"itemType"</span>))
-<span class='co'># }</span><div class='input'>
-</div></pre>
+  dataSource = <span class='st'>"sql"</span>,
+  conn = <span class='kw'>myConn</span>,
+  activeFilters = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(itemType = <span class='st'>"Fish"</span>, itemYear = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2010</span>, <span class='fl'>2017</span>))
+) <span class='op'>%&gt;%</span>
+  <span class='fu'>sumRevenue</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"itemYear"</span>, <span class='st'>"itemType"</span>))
+}
+</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
-  <p>Developed by Nathaniel Price, Christopher Chizinski.</p>
+  <p>Developed by Christopher Chizinski, Nathaniel Price, Kevin Pope, Joseph Fotaine.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

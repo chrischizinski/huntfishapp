@@ -6,23 +6,31 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Load and filter data — filterData • huntfishapp</title>
+<title>Load and filter data — filterData • HuntFishApp</title>
+
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -30,13 +38,13 @@
 
 
 
-<meta property="og:title" content="Load and filter data — filterData" />
 
+<meta property="og:title" content="Load and filter data — filterData" />
 <meta property="og:description" content="This function has the option to either load data from a local file,
 dataSource = &quot;csv&quot;, or a database backend, dataSource = &quot;sql&quot;.
 If using a local file, a data frame is returned. If using a database backend,
 an unevaluated dplyr data frame corresponding to a SQL query is returned." />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -50,9 +58,20 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48496439-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-48496439-4');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -65,7 +84,7 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">huntfishapp</a>
+        <a class="navbar-link" href="../index.html">HuntFishApp</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0</span>
       </span>
     </div>
@@ -74,7 +93,7 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,7 +116,6 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -107,6 +125,7 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -118,16 +137,14 @@ an unevaluated dplyr data frame corresponding to a SQL query is returned." />
     </div>
 
     <div class="ref-description">
-    
     <p>This function has the option to either load data from a local file,
 <code>dataSource = "csv"</code>, or a database backend, <code>dataSource = "sql"</code>.
 If using a local file, a data frame is returned. If using a database backend,
 an unevaluated <code>dplyr</code> data frame corresponding to a SQL query is returned.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>filterData</span>(<span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"sql"</span>, <span class='kw'>conn</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>filterData</span>(dataSource = <span class='st'>"sql"</span>, conn = <span class='kw'>NULL</span>, activeFilters = <span class='kw'>NULL</span>)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -148,17 +165,16 @@ a connection to a database management system. Only needed when
 variables and values indicating filter condition (see details)</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>If <code>dataSource="sql"</code>, returns an unevaluated dplyr data frame
 corresponding to a SQL query (class: tbl_dbi,' tbl_sql, tbl_lazy, tbl). If
 <code>dataSource="csv"</code>, returns a standard dplyr data frame.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>When <code>dataSource = "csv"</code>, the function will return data from the built
-in dataset <code><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data("huntfishappDemo", package = "huntfishapp")</a></code>. The
+in dataset <code><a href='https://rdrr.io/r/utils/data.html'>data("huntfishappDemo", package = "huntfishapp")</a></code>. The
 option to use a local file is provided mainly to demonstrate the app functionality
 if a database backend is unavailabe. To use a different data file the source
 code of the function will need to be modified. Using a local data file has
@@ -189,16 +205,16 @@ on the server named <code>"huntfishapp"</code> using the user supplied connectio
   purchase or issue date.</p></li>
 <li><p>price: Price of item including relevant fees.</p></li>
 </ul>
-    
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Demo data: All items for male customers age 0-17 in Lancaster county</span>
 <span class='fu'>filterData</span>(
-  <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"csv"</span>,
-  <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
-    <span class='kw'>gender</span> <span class='kw'>=</span> <span class='st'>"Male"</span>,
-    <span class='kw'>county</span> <span class='kw'>=</span> <span class='st'>"lancaster"</span>,
-    <span class='kw'>ageGroup</span> <span class='kw'>=</span> <span class='st'>"0-17"</span>
+  dataSource = <span class='st'>"csv"</span>,
+  activeFilters = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+    gender = <span class='st'>"Male"</span>,
+    county = <span class='st'>"lancaster"</span>,
+    ageGroup = <span class='st'>"0-17"</span>
   )
 )</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 208 x 18</span><span>
 #&gt;    itemUID issueDate  itemResidency duration durationValue residency state
@@ -213,65 +229,61 @@ on the server named <code>"huntfishapp"</code> using the user supplied connectio
 #&gt; </span><span style='color: #555555;'> 8</span><span>    </span><span style='text-decoration: underline;'>8</span><span>730 2011-08-15 T             Season               1 T         NE   
 #&gt; </span><span style='color: #555555;'> 9</span><span>    </span><span style='text-decoration: underline;'>9</span><span>294 2011-09-28 T             Season               1 T         NE   
 #&gt; </span><span style='color: #555555;'>10</span><span>   </span><span style='text-decoration: underline;'>11</span><span>102 2011-12-30 T             Season               1 T         NE   
-#&gt; </span><span style='color: #555555;'># ... with 198 more rows, and 11 more variables: itemType </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   itemYear </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, price </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, birthYear </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, gender </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, county </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   customerUID </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, age </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, ageGroup </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, month </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, year </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div></span><span class='co'># NOT RUN {</span>
+#&gt; </span><span style='color: #555555;'># … with 198 more rows, and 11 more variables: itemType </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, itemYear </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   price </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, birthYear </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, gender </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, county </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   customerUID </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, age </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, ageGroup </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, month </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, year </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># Database connection. Suggest using keyring package to avoid hardcoding</span>
 <span class='co'># passwords</span>
-<span class='no'>myConn</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>DBI</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/DBI/topics/dbConnect'>dbConnect</a></span>(<span class='kw pkg'>odbc</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/odbc/topics/odbc'>odbc</a></span>(),
-  <span class='kw'>dsn</span> <span class='kw'>=</span> <span class='st'>"HuntFishApp"</span>, <span class='co'># Your datasource name</span>
-  <span class='kw'>uid</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
-  <span class='kw'>pwd</span> <span class='kw'>=</span> <span class='kw pkg'>keyring</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/keyring/topics/key_get'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
+<span class='kw'>myConn</span> <span class='op'>&lt;-</span> <span class='kw'>DBI</span>::<span class='fu'><a href='https://dbi.r-dbi.org/reference/dbConnect.html'>dbConnect</a></span>(<span class='kw'>odbc</span>::<span class='fu'><a href='https://rdrr.io/pkg/odbc/man/odbc.html'>odbc</a></span>(),
+  dsn = <span class='st'>"HuntFishApp"</span>, <span class='co'># Your datasource name</span>
+  uid = <span class='kw'>keyring</span>::<span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppUID"</span>), <span class='co'># Your username</span>
+  pwd = <span class='kw'>keyring</span>::<span class='fu'><a href='https://rdrr.io/pkg/keyring/man/key_get.html'>key_get</a></span>(<span class='st'>"HuntFishAppPWD"</span>)
 ) <span class='co'># Your password</span>
 
 <span class='co'># SQL Backend: Collect 10 resident waterfowl and hunt items for January 2017</span>
-<span class='no'>wfJan2017</span> <span class='kw'>&lt;-</span>
+<span class='kw'>wfJan2017</span> <span class='op'>&lt;-</span>
   <span class='fu'>filterData</span>(
-    <span class='kw'>dataSource</span> <span class='kw'>=</span> <span class='st'>"sql"</span>,
-    <span class='kw'>conn</span> <span class='kw'>=</span> <span class='no'>myConn</span>,
-    <span class='kw'>activeFilters</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
-      <span class='kw'>issueDate</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2017-01-01"</span>, <span class='st'>"2017-01-31"</span>),
-      <span class='kw'>itemType</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"Waterfowl"</span>, <span class='st'>"Hunt"</span>),
-      <span class='kw'>residency</span> <span class='kw'>=</span> <span class='st'>"T"</span>
+    dataSource = <span class='st'>"sql"</span>,
+    conn = <span class='kw'>myConn</span>,
+    activeFilters = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+      issueDate = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2017-01-01"</span>, <span class='st'>"2017-01-31"</span>),
+      itemType = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Waterfowl"</span>, <span class='st'>"Hunt"</span>),
+      residency = <span class='st'>"T"</span>
     )
   )
 
 <span class='co'># Inspect SQL query (useful for debugging)</span>
-<span class='no'>wfJan2017</span> <span class='kw'>%&gt;%</span> <span class='fu'>show_query</span>()
+<span class='kw'>wfJan2017</span> <span class='op'>%&gt;%</span> <span class='fu'>show_query</span>()
 
 <span class='co'># Evaluate SQL query (set n = Inf to return all rows)</span>
-<span class='no'>wfJan2017</span> <span class='kw'>%&gt;%</span> <span class='fu'>collect</span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='kw'>wfJan2017</span> <span class='op'>%&gt;%</span> <span class='fu'>collect</span>(n = <span class='fl'>10</span>)
+}
+</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
-  <p>Developed by Nathaniel Price, Christopher Chizinski.</p>
+  <p>Developed by Christopher Chizinski, Nathaniel Price, Kevin Pope, Joseph Fotaine.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

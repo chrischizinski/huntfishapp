@@ -1,1 +1,8 @@
 destination: docs
+title: HuntFishApp
+url: http://chrischizinski.github.io/MODIStsp
+template:
+  params:
+    bootswatch: flatly
+    ganalytics: UA-48496439-4
+
