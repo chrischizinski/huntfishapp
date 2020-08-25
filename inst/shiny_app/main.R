@@ -281,5 +281,4 @@ main <- function(input, output, session, sharedInputs) {
   callModule(churn, "churn", dataFilters, sharedInputs)
   callModule(upset, "upset", dataFilters, sharedInputs)
   callModule(radialsets, "radialsets", dataFilters, sharedInputs)
-  callModule(about, "about") #, dataFilters, sharedInputs
 }
