@@ -12,8 +12,8 @@ wildlife agencies and non-governmental organizations with a web-based,
 exploratory data analysis application for hunting, fishing, and outdoor
 recreation sales data.
 
-  - **Package Website:** <https://chrischizinski.github.io/huntfishapp>
-  - **Source Code:** <https://github.com/chrischizinski/huntfishapp>
+  - **Package Website:** <https://natbprice.github.io/huntfishapp>
+  - **Source Code:** <https://github.com/natbprice/huntfishapp>
   - **Live Demo App:** <https://natbprice.shinyapps.io/huntfishapp/>
 
 <img src="man/figures/app_screenshot.png" align="center" />
@@ -24,7 +24,7 @@ The **huntfishapp** package is currently only available from Github.
 
 ``` r
 # Install development version from GitHub
-devtools::install_github("chrischizinski/huntfishapp", build_vignettes = TRUE)
+devtools::install_github("natbprice/huntfishapp", build_vignettes = TRUE)
 ```
 
 ## Getting Started
@@ -84,17 +84,6 @@ the installation and setup vignette
 Please note that the ‘huntfishapp’ project is released with a
 [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By
 contributing to this project, you agree to abide by its terms.
-
-This software has been approved for release by the U.S. Geological
-Survey (USGS). Although the software has been subjected to rigorous
-review, the USGS reserves the right to update the software as needed
-pursuant to further analysis and review. No warranty, expressed or
-implied, is made by the USGS or the U.S. Government as to the
-functionality of the software and related material nor shall the fact of
-release constitute any such warranty. Furthermore, the software is
-released on condition that neither the USGS nor the U.S. Government
-shall be held liable for any damages resulting from its authorized or
-unauthorized use.
 
 ## Acknowledgments
 
