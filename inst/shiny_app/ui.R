@@ -10,7 +10,17 @@ fluidPage(
       rel = "stylesheet",
       type = "text/css",
       href = "style.css"
-    )))
+    ))),
+    #end dashboardPage
+    tags$footer("My footer", align = "center", style = "
+              position:absolute;
+              bottom:0;
+              width:100%;
+              height:50px;   /* Height of the footer */
+              color: white;
+              padding: 10px;
+              background-color: black;
+              z-index: 1000;")
   ),
 
   # Main UI -------------------------------------------------------------
