@@ -185,8 +185,8 @@ mainUI <- function(id) {
             radialsetsUI(ns("radialsets"))
           )
           shinyBS::bsCollapsePanel("About the app",
-                                   value = "aboutapp",
-                                   aboutUI(ns("aboutapp"))
+                                   value = "about",
+                                   aboutUI(ns("about"))
           )
         ),
         width = 10

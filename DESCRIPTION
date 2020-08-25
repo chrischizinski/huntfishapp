@@ -1,4 +1,4 @@
-Package: HuntFishApp
+Package: huntfishapp
 Title: Exploratory Data Analysis Application for Hunting, Fishing, and Outdoor Recreation
 Version: 1.0
 Authors@R: c(
