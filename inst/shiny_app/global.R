@@ -69,6 +69,7 @@ source("plot-mod-recruitment.R")
 source("plot-mod-churn.R")
 source("plot-mod-upset.R")
 source("plot-mod-radialsets.R")
+source("display_about.R")
 
 
 # Generic error message ---------------------------------------------------
