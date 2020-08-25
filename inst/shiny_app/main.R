@@ -118,6 +118,8 @@ mainUI <- function(id) {
         width = 2
       ),
       mainPanel(
+        
+        div(class = "sticky_footer", p("test footer")),
 
         # Filter description -------------------------------------------
         htmlOutput(ns("filterDesc")),
@@ -277,4 +279,6 @@ main <- function(input, output, session, sharedInputs) {
   callModule(churn, "churn", dataFilters, sharedInputs)
   callModule(upset, "upset", dataFilters, sharedInputs)
   callModule(radialsets, "radialsets", dataFilters, sharedInputs)
+  
+  
 }

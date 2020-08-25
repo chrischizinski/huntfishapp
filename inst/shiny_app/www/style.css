@@ -1,4 +1,4 @@
-﻿/* CSS used here will be applied after bootstrap.css */
+/* CSS used here will be applied after bootstrap.css */
 /** { 
 	margin: auto;
 	max-width: 1366px;
@@ -92,4 +92,14 @@
 
 hr {
 	border-color: gray;
+}
+
+.sticky_footer {
+  position:fixed;
+  bottom:0;
+  right:0;
+  left:0;
+  background:#3c8dbc;
+  z-index: 1000;
+  opacity: 0.9; 
 }
