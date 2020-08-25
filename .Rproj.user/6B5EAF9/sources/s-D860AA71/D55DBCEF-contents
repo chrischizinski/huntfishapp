@@ -10,6 +10,7 @@ Authors@R: c(
     comment= c(ORCID = "0000-0003-1876-1687")),
     person("Joseph (TJ)", "Fontaine", email = "fontaine.joseph@gmail.com", role = c("aut"),
     comment= c(ORCID = "0000-0002-7639-9156"))
+    
     )
 Description: This package provides an interactive web-based application for
   exploratory data analysis of hunting, fishing, and outdoor recreation sales data
