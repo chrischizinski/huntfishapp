@@ -183,7 +183,7 @@ mainUI <- function(id) {
           shinyBS::bsCollapsePanel("Item Combinations (Radial Sets plot)",
             value = "radialsets",
             radialsetsUI(ns("radialsets"))
-          )
+          ),
           shinyBS::bsCollapsePanel("About the app",
                                    value = "about",
                                    aboutUI(ns("about"))
@@ -282,5 +282,5 @@ main <- function(input, output, session, sharedInputs) {
   callModule(churn, "churn", dataFilters, sharedInputs)
   callModule(upset, "upset", dataFilters, sharedInputs)
   callModule(radialsets, "radialsets", dataFilters, sharedInputs)
-  callModule(about, "about", dataFilters, sharedInputs) ###
+  callModule(about, "about", dataFilters, sharedInputs) #
 }
