@@ -4,7 +4,7 @@ author: "Nathaniel Price"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Setup}
+  %\VignetteIndexEntry{Installation and Setup}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -28,7 +28,7 @@ The huntfishapp package is currently only available from Github.
 
 ```{r, eval = FALSE}
 # Install development version from GitHub (requires devtools package)
-devtools::install_github("natbprice/huntfishapp")
+devtools::install_github("chrischizinski/huntfishapp")
 ```
 
 ### Database Connection
