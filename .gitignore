@@ -1,5 +1,6 @@
 docs
 .Rhistory
 .DS_Store
-.RProj.user
+.RProj.user/
+
 .Rproj.user
