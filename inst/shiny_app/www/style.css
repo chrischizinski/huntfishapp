@@ -95,7 +95,7 @@ hr {
 }
 
 .sticky_footer {
-  position:fixed;
+  position:relative;
   flex: 1;
   bottom:0;
   right:0;
