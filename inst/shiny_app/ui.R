@@ -10,9 +10,9 @@ fluidPage(
       rel = "stylesheet",
       type = "text/css",
       href = "style.css"
-    )))
-  ),
+    ))),
 
   # Main UI -------------------------------------------------------------
   mainUI("mainNS")
+  )
 )
