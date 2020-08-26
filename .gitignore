@@ -2,4 +2,5 @@ docs
 .Rhistory
 .DS_Store
 .RProj.user/
-.Rproj.user
+.Rproj*
+pkgdowntravis.Rproj

@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/chrischizinski/huntfishapp.svg?branch=master)](https://travis-ci.com/chrischizinski/huntfishapp)
 <!-- badges: end -->
 
 The goal of **huntfishapp** is to provide state and provincial fish and

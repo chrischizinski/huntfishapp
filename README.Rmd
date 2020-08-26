@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 # huntfishapp
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/chrischizinski/huntfishapp.svg?branch=master)](https://travis-ci.com/chrischizinski/huntfishapp)
 <!-- badges: end -->
 
 The goal of **huntfishapp** is to provide state and provincial fish and wildlife agencies and non-governmental organizations with a web-based, exploratory data analysis application for hunting, fishing, and outdoor recreation sales data.
