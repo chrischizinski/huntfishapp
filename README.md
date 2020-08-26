@@ -14,7 +14,7 @@ recreation sales data.
 
   - **Package Website:** <https://chrischizinski.github.io/huntfishapp>
   - **Source Code:** <https://github.com/chrischizinski/huntfishapp>
-  - **Live Demo App:** <https://natbprice.shinyapps.io/huntfishapp/>
+  - **Live Demo App:** <https://chrischizinski.shinyapps.io/shiny_app/>
 
 <img src="man/figures/app_screenshot.png" align="center" />
 
@@ -24,7 +24,9 @@ The **huntfishapp** package is currently only available from Github.
 
 ``` r
 # Install development version from GitHub
-devtools::install_github("chrischizinski/huntfishapp", build_vignettes = TRUE)
+# install.packages("remotes")
+
+remotes::install_github("chrischizinski/huntfishapp", build_vignettes = TRUE)
 ```
 
 ## Getting Started
