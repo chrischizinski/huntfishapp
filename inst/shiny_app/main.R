@@ -125,7 +125,7 @@ mainUI <- function(id) {
                                        the functionality of the software and related material nor shall the fact of release constitute any such warranty.
                                        Furthermore, the software is released on condition that neither the USGS nor the U.S. Government shall be held
                                        liable for any damages resulting from its authorized or unauthorized use."),
-                 tags$a(href="https://snr.unl.edu/aboutus/who/people/faculty-member.aspx?pid=1394", "Contact information for Chris Chizinski")
+                 tags$a(align = "center", href="https://snr.unl.edu/aboutus/who/people/faculty-member.aspx?pid=1394", "Contact information for Chris Chizinski")
                  )
         ,
 
