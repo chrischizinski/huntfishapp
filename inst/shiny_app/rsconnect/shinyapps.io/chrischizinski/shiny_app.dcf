@@ -4,7 +4,14 @@ username:
 account: chrischizinski
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
+<<<<<<< HEAD
 appId: 2711217
 bundleId: 3560836
 url: https://chrischizinski.shinyapps.io/shiny_app/
 when: 1598465060.0522
+=======
+appId: 2710925
+bundleId: 3560597
+url: https://chrischizinski.shinyapps.io/shiny_app/
+when: 1598460173.56481
+>>>>>>> a3a90fc0d612173a08cc087676f31c26ef812e64
