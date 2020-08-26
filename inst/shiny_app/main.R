@@ -118,6 +118,16 @@ mainUI <- function(id) {
         width = 2
       ),
       mainPanel(
+        tags$div(class = "sticky_footer", 
+                 tags$p("This software has been approved for release by the U.S. Geological Survey (USGS). Although the software has 
+                                       been subjected to rigorous review, the USGS reserves the right to update the software as needed pursuant to
+                                       further analysis and review. No warranty, expressed or implied, is made by the USGS or the U.S. Government as to
+                                       the functionality of the software and related material nor shall the fact of release constitute any such warranty.
+                                       Furthermore, the software is released on condition that neither the USGS nor the U.S. Government shall be held
+                                       liable for any damages resulting from its authorized or unauthorized use."),
+                 tags$a(align = "center", href="https://snr.unl.edu/aboutus/who/people/faculty-member.aspx?pid=1394", "Contact information for Chris Chizinski")
+                 )
+        ,
 
         # Filter description -------------------------------------------
         htmlOutput(ns("filterDesc")),
@@ -138,8 +148,7 @@ mainUI <- function(id) {
                                "recruitment",
                                "churn",
                                "upset",
-                               "radialsets",
-                               "about"
+                               "radialsets"
                              ),
                              selected = ""
                            ))
@@ -186,10 +195,7 @@ mainUI <- function(id) {
           )
         ),
         width = 10
-      ),
-      # WHERE YOUR FOOTER GOES
-      hr(),
-      print("~~~my disclaimer~~~~")
+      )
     )
   )
 }
@@ -281,4 +287,6 @@ main <- function(input, output, session, sharedInputs) {
   callModule(churn, "churn", dataFilters, sharedInputs)
   callModule(upset, "upset", dataFilters, sharedInputs)
   callModule(radialsets, "radialsets", dataFilters, sharedInputs)
+  
+  
 }
